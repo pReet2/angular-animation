@@ -1,0 +1,25 @@
+<div [@directions]="hideShow" class="text-center font-weight-bold mt-5 h2">
+  <p>Hello! We are Birdies🐦</p>
+  <p>Let's play with some animations!!</p>
+</div>
+
+<img src="https://images.unsplash.com/photo-1549608276-5786777e6587?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1
+  &auto=format&fit=crop&w=1050&q=80" class="img-fluid w-25" [@directions]="movement" />
+<br>
+
+<div class="buttons pt-5 mt-5">
+  <button class="btn btn-success ml-2 text-center" (click)="changeMovement('tilt')">
+    skew
+  </button>
+
+  <button class="btn btn-danger ml-2" (click)="changeMovement('enlarge')">
+    scale
+  </button>
+
+  <button class="btn btn-warning ml-2" (click)="changeMovement('rotate')">
+    rotate
+  </button>
+  <button (click)="toggle()" class="btn btn-info ml-2">hide/show</button>
+</div>
+
+<router-outlet></router-outlet>
